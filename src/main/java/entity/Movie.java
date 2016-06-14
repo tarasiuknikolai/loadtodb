@@ -2,12 +2,12 @@ package entity;
 
 public class Movie {
     private int id;
-    private String namerus;
-    private String nameeng;
-    private int yr;
+    private String nameRus;
+    private String nameOrigin;
+    private int year;
     private String country; //
     private String genre; //
-    private String descr;
+    private String description;
     private double rating;
     private double price;
 
@@ -19,28 +19,28 @@ public class Movie {
         this.id = id;
     }
 
-    public String getNamerus() {
-        return namerus;
+    public String getNameRus() {
+        return nameRus;
     }
 
-    public void setNamerus(String namerus) {
-        this.namerus = namerus;
+    public void setNameRus(String nameRus) {
+        this.nameRus = nameRus;
     }
 
-    public String getNameeng() {
-        return nameeng;
+    public String getNameOrigin() {
+        return nameOrigin;
     }
 
-    public void setNameeng(String nameeng) {
-        this.nameeng = nameeng;
+    public void setNameOrigin(String nameOrigin) {
+        this.nameOrigin = nameOrigin;
     }
 
-    public int getYr() {
-        return yr;
+    public int getYear() {
+        return year;
     }
 
-    public void setYr(int yr) {
-        this.yr = yr;
+    public void setYear(int year) {
+        this.year = year;
     }
 
     public String getCountry() {
@@ -59,12 +59,12 @@ public class Movie {
         this.genre = genre;
     }
 
-    public String getDescr() {
-        return descr;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescr(String descr) {
-        this.descr = descr;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public double getRating() {
@@ -87,8 +87,9 @@ public class Movie {
     public String toString() {
         return "Movie{" +
                 "id=" + id +
-                ", namerus='" + namerus + '\'' +
-                ", yr=" + yr +
+                ", nameRus='" + nameRus + '\'' +
+                ", year=" + year +
                 '}';
     }
 }
+

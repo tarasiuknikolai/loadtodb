@@ -54,7 +54,7 @@ public class LoadDataToDB {
             tmpUsers.setId(++i);
             tmpUsers.setName(preTbl[0]);
             tmpUsers.setEmail(preTbl[1]);
-            tmpUsers.setPasswd(preTbl[2]);
+            tmpUsers.setPassword(preTbl[2]);
 
             usersMap.put(preTbl[0], tmpUsers);
         }
@@ -81,12 +81,12 @@ public class LoadDataToDB {
             String[] preTbl = line.split("\n");
             Movie tmpMovie  = new Movie();
             tmpMovie.setId(++i);
-            tmpMovie.setNamerus(preTbl[0].split("/")[0]);
-            tmpMovie.setNameeng(preTbl[0].split("/")[1]);
-            tmpMovie.setYr(Integer.parseInt(preTbl[1]));
+            tmpMovie.setNameRus(preTbl[0].split("/")[0]);
+            tmpMovie.setNameOrigin(preTbl[0].split("/")[1]);
+            tmpMovie.setYear(Integer.parseInt(preTbl[1]));
             tmpMovie.setCountry(preTbl[2]);
             tmpMovie.setGenre(preTbl[3]);
-            tmpMovie.setDescr(preTbl[4]);
+            tmpMovie.setDescription(preTbl[4]);
             tmpMovie.setRating(Double.parseDouble(preTbl[5].substring(7)));
             tmpMovie.setPrice(Double.parseDouble(preTbl[6].substring(6)));
             movieMap.put(preTbl[0].split("/")[0], tmpMovie);

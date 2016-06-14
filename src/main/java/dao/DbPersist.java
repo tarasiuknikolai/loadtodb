@@ -28,13 +28,13 @@ public class DbPersist {
         Connection connection = dataSource.getConnection();
         Statement statement = connection.createStatement();
         statement.executeUpdate("DELETE FROM users");
-        String sql = "INSERT INTO USERS(id, name, email, passwd) VALUES (?,?,?,?)";
+        String sql = "INSERT INTO USERS(id, name, email, password) VALUES (?,?,?,?)";
         for(Map.Entry<String, Users> pair : usersMap.entrySet()) {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1,pair.getValue().getId());
             ps.setString(2,pair.getValue().getName());
             ps.setString(3,pair.getValue().getEmail());
-            ps.setString(4,pair.getValue().getPasswd());
+            ps.setString(4,pair.getValue().getPassword());
             ps.executeUpdate();
         }
         System.out.println("persistUsers - DONE");
@@ -60,14 +60,14 @@ public class DbPersist {
         Connection connection = dataSource.getConnection();
         Statement statement = connection.createStatement();
         statement.executeUpdate("DELETE FROM movie");
-        String sql = "INSERT INTO movie(id, namerus, nameeng, yr, descr, rating, price) VALUES (?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO movie(id, namerus, nameorigin, year, description, rating, price) VALUES (?,?,?,?,?,?,?)";
         for(Map.Entry<String, Movie> pair : movieMap.entrySet()) {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, pair.getValue().getId());
-            ps.setString(2, pair.getValue().getNamerus());
-            ps.setString(3, pair.getValue().getNameeng());
-            ps.setInt(4, pair.getValue().getYr());
-            ps.setString(5, pair.getValue().getDescr());
+            ps.setString(2, pair.getValue().getNameRus());
+            ps.setString(3, pair.getValue().getNameOrigin());
+            ps.setInt(4, pair.getValue().getYear());
+            ps.setString(5, pair.getValue().getDescription());
             ps.setDouble(6,pair.getValue().getRating());
             ps.setDouble(7,pair.getValue().getPrice());
             ps.executeUpdate();
