@@ -13,15 +13,15 @@ create table if not exists users
   id integer primary key autoincrement
 , name text
 , email text
-, passwd text
+, password text
 );
 create table if not exists movie
 (
   id integer primary key autoincrement
 , namerus text
-, nameeng text
-, yr      integer
-, descr   text
+, nameorigin text
+, year      integer
+, description   text
 , rating  numeric
 , price   numeric
 );
